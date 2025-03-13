@@ -23,8 +23,9 @@ nav section .right-navbar {
 nav section .right-navbar a {
   text-decoration: none;
   color: black;
+  transition: 0.3s all ease;
 }
 nav section .right-navbar a.active, nav section .right-navbar a:hover {
-  font-weight: bold;
+  font-weight: 500;
   color: var(--primary-blue);
 }/*# sourceMappingURL=navbar.css.map */

@@ -21,9 +21,10 @@ nav {
             a {
                 text-decoration: none;
                 color: black;
+                transition: 0.3s all ease;
                 &.active,
                 &:hover {
-                    font-weight: bold;
+                    font-weight: 500;
                     color: var(--primary-blue);
                 }
             }

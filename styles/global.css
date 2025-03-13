@@ -2,7 +2,7 @@
 :root {
   --primary-blue: #0061ff;
   --desktop-gap: 60px;
-  --h1-typography: clamp(30px, 3.5vw, 50px);
+  --h1-typography: clamp(26px, 3.5vw, 50px);
   --h2-typography: clamp(24px, 2.5vw, 36px);
   --p-typography: clamp(16px, 1.2vw, 24px);
   --small-typography: clamp(14px, 1vw, 18px);

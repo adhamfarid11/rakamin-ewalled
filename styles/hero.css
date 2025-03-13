@@ -1,8 +1,8 @@
 /* Hero Section */
 section.hero {
   display: flex;
-  flex-direction: column;
   gap: var(--desktop-gap);
+  flex-direction: column;
 }
 section.hero h1 {
   font-size: var(--h1-typography);
@@ -17,26 +17,6 @@ section.hero .upper .greetings-container {
   flex-direction: column;
   gap: 10px;
 }
-section.hero .upper .profile {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  cursor: pointer;
-}
-section.hero .upper .profile .name-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-}
-section.hero .upper .profile .name-wrapper .name {
-  font-weight: bold;
-}
-section.hero .upper .profile img {
-  width: 90px;
-  aspect-ratio: 1/1;
-  border-radius: 100%;
-  border: 5px solid var(--primary-blue);
-}
 section.hero .lower {
   display: flex;
   gap: 50px;
@@ -48,8 +28,6 @@ section.hero .lower .account-info {
   background-color: var(--primary-blue);
   border-radius: 20px;
   padding: 50px;
-  max-width: 300px;
-  width: 30%;
   color: white;
   box-shadow: var(--box-shadow-grey);
 }
@@ -63,6 +41,7 @@ section.hero .lower .balance-container {
   justify-content: space-between;
   background-color: white;
   padding: 50px;
+  align-items: center;
   border-radius: 32px;
 }
 section.hero .lower .balance-container .left .balance-info {
@@ -96,4 +75,31 @@ section.hero .lower .balance-container .right .dummy-logo {
 }
 section.hero .lower .balance-container .right .dummy-logo img {
   width: 50%;
+}
+@media (max-width: 768px) {
+  section.hero .upper img {
+    width: clamp(70px, 20vw, 120px);
+  }
+  section.hero .lower {
+    flex-direction: column;
+    gap: 25px;
+  }
+  section.hero .lower .account-info {
+    flex: 1;
+    padding: 10px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+  }
+  section.hero .lower .account-info p.number {
+    font-weight: 500;
+    font-size: var(--p-typography);
+  }
+  section.hero .lower .balance-container {
+    padding: 30px;
+  }
+  section.hero .lower .balance-container .right {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=hero.css.map */

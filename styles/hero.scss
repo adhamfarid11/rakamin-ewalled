@@ -1,52 +1,25 @@
 /* Hero Section */
 section.hero {
     display: flex;
-    flex-direction: column;
     gap: var(--desktop-gap);
+    flex-direction: column;
 
     h1 {
         font-size: var(--h1-typography);
     }
-
     .upper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         .greetings-container {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-
-        .profile {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            cursor: pointer;
-
-            .name-wrapper {
-                display: flex;
-                flex-direction: column;
-                align-items: end;
-                .name {
-                    font-weight: bold;
-                }
-            }
-
-            img {
-                width: 90px;
-                aspect-ratio: 1/1;
-                border-radius: 100%;
-                border: 5px solid var(--primary-blue);
-            }
-        }
     }
-
     .lower {
         display: flex;
         gap: 50px;
-
         .account-info {
             display: flex;
             flex: 1;
@@ -54,8 +27,6 @@ section.hero {
             background-color: var(--primary-blue);
             border-radius: 20px;
             padding: 50px;
-            max-width: 300px;
-            width: 30%;
             color: white;
             box-shadow: var(--box-shadow-grey);
             p.number {
@@ -63,15 +34,14 @@ section.hero {
                 font-weight: bold;
             }
         }
-
         .balance-container {
             display: flex;
             flex: 5;
             justify-content: space-between;
             background-color: white;
             padding: 50px;
+            align-items: center;
             border-radius: 32px;
-
             .left {
                 .balance-info {
                     display: flex;
@@ -87,12 +57,10 @@ section.hero {
                     }
                 }
             }
-
             .right {
                 display: flex;
                 align-items: center;
                 gap: 25px;
-
                 .dummy-logo {
                     display: flex;
                     justify-content: center;
@@ -106,6 +74,36 @@ section.hero {
                     img {
                         width: 50%;
                     }
+                }
+            }
+        }
+    }
+    // handle mobile
+    @media (max-width: 768px) {
+        .upper {
+            img {
+                width: clamp(70px, 20vw, 120px);
+            }
+        }
+        .lower {
+            flex-direction: column;
+            gap: 25px;
+            .account-info {
+                flex: 1;
+                padding: 10px 20px;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 12px;
+                p.number {
+                    font-weight: 500;
+                    font-size: var(--p-typography);
+                }
+            }
+            .balance-container {
+                padding: 30px;
+                .right {
+                    flex-direction: column;
                 }
             }
         }
